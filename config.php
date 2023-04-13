@@ -25,5 +25,5 @@ $socialMedia = [
 ?>
 
 <?php
-$conn = mysqli_connect("localhost","root","", "hamza_mobiles_db") or die("Connection Failed :". mysqli_connect_error());
+$conn = mysqli_connect("auth-db902.hstgr.io","u117560748_mobile","Mobile@1122", "u117560748_mobile") or die("Connection Failed :". mysqli_connect_error());
 ?>

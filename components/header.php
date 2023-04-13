@@ -1,28 +1,3 @@
-<?php 
-    if(isset($_POST['save'])){
-        include "config.php";
-
-        $email= mysqli_real_escape_string($conn,$_POST['email']);
-        $psw = mysqli_real_escape_string($conn,$_POST['psw']);
-        $pswrepeat = mysqli_real_escape_string($conn,$_POST['psw-repeat']);
-
-        $sql = "SELECT email FROM form WHERE email = '{$email}' ";
-        $result = mysqli_query($conn, $sql) or die("Query Failed");
-
-        if(mysqli_num_rows($result) > 0){
-                echo "<p style='color:red; text-align:center; margin:10px;'> Email already exsists </p>";
-        }else{
-                $sql1 = "INSERT INTO form(email,password,psw_repeat)
-                VALUES('{$email}','{$psw}','{$pswrepeat}')";
-
-                if(mysqli_query($conn, $sql1)){
-                    header("Location : http://localhost/hamza_mobiles_db/admin/header.php");
-                }
-        }
-
-    }
-?>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-4 pb-4 pr-5 pl-5">
         <a class="navbar-brand d-flex" href="./"> <img style="width:30px;" src="<?= $siteLogo ?>" alt=""> <?= $siteTitle ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
