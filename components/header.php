@@ -20,7 +20,7 @@
                 </li>
 
             </ul>
-            <form action="<?php $_SERVER['$PHP_SELF']; ?> " class="form-inline my-2 my-lg-0 ml-auto">
+            <form action="" class="form-inline my-2 my-lg-0 ml-auto">
                 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn btn-outline-info my-2 my-sm-0 pr-3" type="submit">Sign Up</button>
 
                 <div id="id01" class="modal">
