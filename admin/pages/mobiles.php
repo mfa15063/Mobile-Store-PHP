@@ -148,7 +148,7 @@
                             $query = 'SELECT * FROM `mobiles`' ;
                             $result = mysqli_query($db, $query);
 
-                            while ($row = mysqli_fetch_assoc($result)) {
+                            while ($row = mysqli_fetch_assoc($result)) :
                                 extract($row);
                                 echo '<tr>';
                                 echo "<td>$name</td>";
@@ -158,16 +158,56 @@
                                 echo "<td>$price</td>";
                                 echo "<td>$battery</td>";
                                 echo "<td>
-                                    <a href='#' class='btn btn-success btn-circle'>
+                                    <button type='button' data-bs-toggle='modal' data-bs-target='#update-mobiles$mobile_id' class='btn btn-success btn-circle'>
                                         <i class='fas fa-edit'></i>
-                                    </a>
+                                    </button>
                                     <a href='#' class='btn btn-danger btn-circle'>
                                         <i class='fas fa-trash'></i>
                                     </a>
                                 </td>";
                                 echo '</tr>';
-                            }
-                            ?>
+                                ?>
+                                <div class="modal fade" id="update-mobiles<?= $mobile_id ?>" tabindex="-1" aria-labelledby="update-mobiles-heading<?= $mobile_id ?>" aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen-sm-down">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="update-mobiles-heading<?= $mobile_id ?>"><?= $mobile_id ?></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="row g-3">
+
+
+                                                <div class="col-12">
+                                                    <label for="inputAddress" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Name">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputAddress" class="form-label">Logo</label>
+                                                    <input type="text" class="form-control" id="inputAddress" placeholder="">
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label" for="gridCheck">
+                                                            Check me out
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile ?>
                      </tbody>
                  </table>
              </div>
