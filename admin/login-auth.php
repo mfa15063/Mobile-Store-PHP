@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['signin'])) {
     extract($_POST);
-    $query = "SELECT * FROM `admin` WHERE `username` = '$username' AND `password` = md5('$password') ";
+    $query = "SELECT * FROM `admin` WHERE (`username` = '$username' OR `email` = '$username') AND `password` = md5('$password') ";
     $result = mysqli_query($db, $query);
 
     if ($row = mysqli_fetch_assoc($result)){
@@ -15,6 +15,21 @@ if (isset($_POST['signin'])) {
         echo "<script>alert('Wrong Username or Password');</script>";
     }
 
+}
+
+if (isset($_POST['forget-password'])) {
+    extract($_POST);
+    $query = "SELECT * FROM `admin` WHERE `username` = '$username' OR `email` = '$username' ";
+    $result = mysqli_query($db, $query);
+
+    if ($row = mysqli_fetch_assoc($result)){
+        $_email = $row['email'];
+        sendMail($_email, "ALi", "1122", "Hello");
+        echo "<script>alert('mail sended');</script>";
+        
+    } else {
+        echo "<script>alert('You don't have an account at this email or username. Create an account!');</script>";
+    }
 }
 
 $is_login = false;

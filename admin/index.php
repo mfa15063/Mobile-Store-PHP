@@ -30,7 +30,12 @@
         <?php include "./login-auth.php" ?>
 
         <?php if (!$is_login) : ?>
-            <?php include "./pages/login.php"  ?>
+            <?php
+            if ($page == 'forgot-password')
+                include "./pages/forgot-password.php";
+            else
+                include "./pages/login.php";
+            ?>
         <?php else : ?>
             <?php include "components/sidebar.php" ?>
             <!-- Content Wrapper -->
