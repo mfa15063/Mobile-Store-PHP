@@ -19,15 +19,42 @@
       </div>
       <div class="modal-body">
       <form class="row g-3">
-  
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">First Name</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Last Name</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Contact Numeber</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">city</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Country</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Postal Code</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
 
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Name</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Name">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Logo</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   
   <div class="col-12">
@@ -61,27 +88,30 @@
                      <thead>
                          <tr>
                              <th>Name</th>
-                             <th>Logo</th>
+                             <th>Email</th>
+                             <th>Contact No</th>
                              <th>Action</th>
                          </tr>
                      </thead>
                      <tfoot>
                          <tr>
                              <th>Name</th>
-                             <th>Logo</th>
+                             <th>Email</th>
+                             <th>Contact No</th>
                              <th>Action</th>
                          </tr>
                      </tfoot>
                      <tbody>
                          <?php
-                            $query = 'SELECT * FROM `brand`';
+                            $query = 'SELECT * FROM `user`';
                             $result = mysqli_query($db, $query);
 
                             while ($row = mysqli_fetch_assoc($result)) {
                                 extract($row);
                                 echo '<tr>';
-                                echo "<td>$name</td>";
-                                echo "<td><img src='./assets/img/brands/$logo' alt='$name' style='width: 100px' /></td>";
+                                echo "<td>$first_name . $last_name</td>";
+                                echo "<td>$email</td>";
+                                echo "<td>$contact_no</td>";
                                 echo "<td>
                                     <a href='#' class='btn btn-success btn-circle'>
                                         <i class='fas fa-edit'></i>

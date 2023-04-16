@@ -19,15 +19,14 @@
       </div>
       <div class="modal-body">
       <form class="row g-3">
-  
-
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Name</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Name">
+      <div class="col-12">
+    <label for="inputAddress" class="form-label">Question</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Enter a question">
   </div>
+  
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Logo</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="">
+    <label for="inputAddress" class="form-label">Answer</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Enter answer">
   </div>
   
   <div class="col-12">
@@ -50,6 +49,7 @@
     </div>
   </div>
 </div>
+
      <!-- DataTales Example -->
      <div class="card shadow mb-4">
          <div class="card-header py-3">
@@ -60,28 +60,28 @@
                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                      <thead>
                          <tr>
-                             <th>Name</th>
-                             <th>Logo</th>
+                             <th>Question</th>
+                             <th>Answer</th>
                              <th>Action</th>
                          </tr>
                      </thead>
                      <tfoot>
                          <tr>
-                             <th>Name</th>
-                             <th>Logo</th>
+                            <th>Question</th>
+                             <th>Answer</th>
                              <th>Action</th>
                          </tr>
                      </tfoot>
                      <tbody>
                          <?php
-                            $query = 'SELECT * FROM `brand`';
+                            $query = 'SELECT * FROM `faq`';
                             $result = mysqli_query($db, $query);
 
                             while ($row = mysqli_fetch_assoc($result)) {
                                 extract($row);
                                 echo '<tr>';
-                                echo "<td>$name</td>";
-                                echo "<td><img src='./assets/img/brands/$logo' alt='$name' style='width: 100px' /></td>";
+                                echo "<td>$question</td>";
+                                echo "<td>$answer</td>";
                                 echo "<td>
                                     <a href='#' class='btn btn-success btn-circle'>
                                         <i class='fas fa-edit'></i>
