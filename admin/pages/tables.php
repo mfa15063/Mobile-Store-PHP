@@ -14,19 +14,6 @@
          <div class="card-header py-3">
              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
          </div>
-         	<div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
-			 		<select class  ="form-control" name="state" id="maxRows">
-						 <option value="5000">Show ALL Rows</option>
-						 <option value="5">5</option>
-						 <option value="10">10</option>
-						 <option value="15">15</option>
-						 <option value="20">20</option>
-						 <option value="50">50</option>
-						 <option value="70">70</option>
-						 <option value="100">100</option>
-						</select>
-			 		
-			  	</div>
 
          <div class="card-body">
              <div class="table-responsive">
@@ -514,21 +501,3 @@
          </div>
      </div>
  </div>
-
- <div class='pagination-container' >
-				<nav>
-				  <ul class="pagination">
-            
-            <li data-page="prev" >
-								     <span> < <span class="sr-only">(current)</span></span>
-								    </li>
-				   <!--	Here the JS Function Will Add the Rows -->
-        <li data-page="next" id="prev">
-								       <span> > <span class="sr-only">(current)</span></span>
-								    </li>
-				  </ul>
-				</nav>
-			</div>
-
-</div> <!-- 		End of Container -->
-
