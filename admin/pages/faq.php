@@ -9,46 +9,46 @@
          </a>
      </h1>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen-sm-down">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form class="row g-3">
-      <div class="col-12">
-    <label for="inputAddress" class="form-label">Question</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter a question">
-  </div>
-  
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Answer</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter answer">
-  </div>
-  
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </div>
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-fullscreen-sm-down">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                     <form class="row g-3">
+                         <div class="col-12">
+                             <label for="inputAddress" class="form-label">Question</label>
+                             <input type="text" class="form-control" id="inputAddress" placeholder="Enter a question">
+                         </div>
+
+                         <div class="col-12">
+                             <label for="inputAddress" class="form-label">Answer</label>
+                             <input type="text" class="form-control" id="inputAddress" placeholder="Enter answer">
+                         </div>
+
+                         <div class="col-12">
+                             <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="gridCheck">
+                                 <label class="form-check-label" for="gridCheck">
+                                     Check me out
+                                 </label>
+                             </div>
+                         </div>
+                         <div class="col-12">
+                             <button type="submit" class="btn btn-primary">Sign in</button>
+                         </div>
+                     </form>
+                 </div>
+                 <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary">Save changes</button>
+                 </div>
+             </div>
+         </div>
+     </div>
 
      <!-- DataTales Example -->
      <div class="card shadow mb-4">
@@ -67,7 +67,7 @@
                      </thead>
                      <tfoot>
                          <tr>
-                            <th>Question</th>
+                             <th>Question</th>
                              <th>Answer</th>
                              <th>Action</th>
                          </tr>
@@ -77,7 +77,7 @@
                             $query = 'SELECT * FROM `faq`';
                             $result = mysqli_query($db, $query);
 
-                            while ($row = mysqli_fetch_assoc($result)) :
+                            while ($row = mysqli_fetch_assoc($result)) {
                                 extract($row);
                                 echo '<tr>';
                                 echo "<td>$question</td>";
@@ -91,52 +91,63 @@
                                     </a>
                                 </td>";
                                 echo '</tr>';
-                                ?>
-                                <div class="modal fade" id="update-faq<?= $faq_id ?>" tabindex="-1" aria-labelledby="update-faq-heading<?= $faq_id ?>" aria-hidden="true">
-                                <div class="modal-dialog modal-fullscreen-sm-down">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="update-faq-heading<?= $faq_id ?>"><?= $faq_id ?></h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form class="row g-3">
+                            }
+                            ?>
 
-
-                                                <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Name</label>
-                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Name">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Logo</label>
-                                                    <input type="text" class="form-control" id="inputAddress" placeholder="">
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                        <label class="form-check-label" for="gridCheck">
-                                                            Check me out
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button type="submit" class="btn btn-primary">Sign in</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endwhile ?>
-                        
                      </tbody>
                  </table>
              </div>
          </div>
      </div>
+     <!-- Modal -->
+     <?php
+        $query = "SELECT * FROM `faq`";
+        $result = mysqli_query($db, $query);
+
+        while ($row = mysqli_fetch_assoc($result)) :
+            extract($row);
+        ?>
+         <div class="modal fade" id="update-faq<?= $faq_id ?>" tabindex="-1" aria-labelledby="update-faq-heading<?= $faq_id ?>" aria-hidden="true">
+             <div class="modal-dialog modal-fullscreen-sm-down">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title" id="update-faq-heading<?= $faq_id ?>"><?= $faq_id ?></h5>
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                         <form class="row g-3">
+                             <div class="col-12">
+                                 <label for="inputAddress" class="form-label">Question</label>
+                                 <input type="text"
+                                  class="form-control" id="inputAddress" placeholder="Enter a question" name="question" value="<?=$question?>">
+                             </div>
+
+                             <div class="col-12">
+                                 <label for="inputAddress" class="form-label">Answer</label>
+                                 <input type="text" class="form-control" id="inputAddress" placeholder="Enter answer"name="answerr" value="<?=$answer?>">
+                             </div>
+
+                             <div class="col-12">
+                                 <div class="form-check">
+                                     <input class="form-check-input" type="checkbox" id="gridCheck">
+                                     <label class="form-check-label" for="gridCheck">
+                                         Check me out
+                                     </label>
+                                 </div>
+                             </div>
+                             <div class="col-12">
+                                 <button type="submit" class="btn btn-primary">Sign in</button>
+                             </div>
+                         </form>
+                     </div>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+     <?php endwhile ?>
+
  </div>
