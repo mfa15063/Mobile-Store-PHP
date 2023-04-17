@@ -119,11 +119,11 @@
                      </div>
                      <div class="modal-body">
                          <form class="row g-3">
-                             <div class="col-6">
+                             <div class="col-12">
                                  <label for="inputAddress" class="form-label">Name</label>
                                  <input type="text" class="form-control" id="inputAddress" placeholder="Enter Name" name="name" value="<?= $name ?>">
                              </div>
-                             <div class="col-6">
+                             <div class="col-12">
                                  <label for="inputAddress" class="form-label">Logo</label>
                                  <input type="text" class="form-control" id="inputAddress" placeholder="" name="logo" value="<?= $logo ?>">
                              </div>
