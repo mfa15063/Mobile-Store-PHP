@@ -33,81 +33,8 @@
         </div>
     </div>
 </div>
-<div id="products">
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
-            <div class="flex flex-col justify-center">
-                <div class="max-w-xl mb-6">
-                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                        Iphone 12 Pro Max<br class="hidden md:block" />
-                        <span class="relative px-1">
-                            <div class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"></div>
-                            <span class="relative inline-block text-deep-purple-accent-400"></span>
-                        </span>
-                    </h2>
-                    <p class="text-base text-gray-700 md:text-lg">
-                        Released 2020, November 13 228g, 7.4mm thickness iOS 14.1, up to iOS 14.5 128GB/256GB/512GB storage, no card slot 40% 8,399,033 HITS 712 BECOME A FAN 6.7" 1284x2778 pixels 12MP 2160p 6GB RAM Apple A14 Bionic 3687mAh
-                    </p>
-                </div>
-                <p class="mb-4 text-sm font-bold tracking-widest uppercase">Features</p>
-                <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
-                    <ul class="space-y-3">
-                        <li class="flex">
-                            <span class="mr-1">
-                                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg>
-                            </span> 7.4mm thickness
-                        </li>
-                        <li class="flex">
-                            <span class="mr-1">
-                                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg>
-                            </span> iOS 14.1, up to iOS 14.5
-                        </li>
-                        <li class="flex">
-                            <span class="mr-1">
-                                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg>
-                            </span> 128GB/256GB/512GB storage
 
-                        </li>
-                    </ul>
-                    <ul class="space-y-3">
-                        <li class="flex">
-                            <span class="mr-1">
-                                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg>
-                            </span> no card slot
-                        </li>
-                        <li class="flex">
-                            <span class="mr-1">
-                                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg>
-                            </span> 3687mAh
-                        </li>
-                        <li class="flex">
-                            <span class="mr-1">
-                                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg>
-                            </span> 228g
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <img src="assets/img/iphone.jpg" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php include 'brands.php' ?>
+<?php include 'all-brands.php' ?>
 
 
 <div id="bgvideo">

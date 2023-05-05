@@ -22,4 +22,5 @@ if (isset($_GET["page"])) {
     $page = "home";
 }
 
-$db = mysqli_connect("auth-db902.hstgr.io", "u117560748_mobile", "Mobile@1122", "u117560748_mobile") or die("Connection Failed :" . mysqli_connect_error());
+$db = mysqli_connect("localhost", "root", "root", "alphaware") or die("Connection Failed :" . mysqli_connect_error());
+// $db = mysqli_connect("auth-db902.hstgr.io", "u117560748_mobile", "Mobile@1122", "u117560748_mobile") or die("Connection Failed :" . mysqli_connect_error());

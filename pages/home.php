@@ -21,7 +21,6 @@
         <div class="content">
             <h1>Buy Mobile Phones</h1>
             <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo.</p>
-            <button id="myBtn" onclick="myFunction()">Pause</button>
         </div>
     </div>
 </div>
@@ -134,17 +133,7 @@
                     <span class="font-bold"></span>Description. The “street” rather than focusing solely on current fashion trends. Using street style methods, individuals demonstrate their multiple, negotiated identities, in addition to utilizing
                     subcultural and intersecting styles or trends.
                 </p>
-                <div class="flex items-center">
-                    <button type="submit" class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
-                        Get started
-                    </button>
-                    <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                        Learn More
-                        <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
-                            <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
-                        </svg>
-                    </a>
-                </div>
+                
             </div>
         </div>
     </div>
