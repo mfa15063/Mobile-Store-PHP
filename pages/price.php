@@ -22,7 +22,7 @@
                     We have best prices in the market. You can visit other sites than you belive us. You can visit other sites than you belive us.
                 </p>
             </div>
-            <img src="https://kitwind.io/assets/kometa/half-phone.png" class="w-full mx-auto md:w-auto md:max-w-xs" alt="" />
+            <img style="margin-top: 72px;" src="https://kitwind.io/assets/kometa/half-phone.png" class="w-full mx-auto md:w-auto md:max-w-xs" alt="" />
         </div>
     </div>
 
