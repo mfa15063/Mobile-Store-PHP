@@ -80,6 +80,7 @@
     <!-- Page level custom scripts -->
     <script src="assets/js/demo/chart-area-demo.js"></script>
     <script src="assets/js/demo/chart-pie-demo.js"></script>
+    <script src="assets/js/index.js"></script>
 
 </body>
 
