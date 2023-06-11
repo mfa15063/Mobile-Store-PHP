@@ -44,13 +44,13 @@ var calculateTotal = function () {
     newSubTotal += parseFloat(quantity * price);
   });
 
-  $(".sub-total .amount").html("£" + newSubTotal.toFixed(2));
+  $(".sub-total .amount").html("RS " + newSubTotal.toFixed(2));
 
   var withTax = newSubTotal * 1.2;
 
   var newTotal = withTax + 0;
 
-  $(".total .amount").html("Total" + " " + "£" + newTotal.toFixed(2));
+  $(".total .amount").html("Total" + " " + "RS " + newTotal.toFixed(2));
 };
 
 calculateTotal();

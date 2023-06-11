@@ -1,4 +1,17 @@
 <link rel="stylesheet" href="./assets/css/cart.css">
+<?php
+if(isset($_GET['action']) && $_GET['action'] == 'add'){
+    $product_id = $_GET['id'];
+    $sql = "INSERT INTO `cart`(`product_id`) VALUES ('$product_id')";
+    mysqli_query($db, $sql);
+}
+
+if(isset($_GET['action']) && $_GET['action'] == 'remove'){
+    $product_id = $_GET['id'];
+    $sql = "DELETE FROM `cart` WHERE `product_id` = '$product_id'";
+    mysqli_query($db, $sql);
+}
+?>
 <div id="banner">
     <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
@@ -32,11 +45,7 @@
                 </div>
             </div>
         </div>
-        <a href="/" aria-label="Scroll down" class="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 duration-300 transform border border-gray-400 rounded-full hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 hover:shadow hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z"></path>
-            </svg>
-        </a>
+        
     </div>
 </div>
 <div class="cart">
@@ -44,18 +53,24 @@
         <div class="grid_12">
         </div>
         <ul class="items">
+            <?php
+            $sql = "SELECT * FROM cart INNER JOIN product ON cart.product_id=product.product_id";
+
+            if ($result = mysqli_query($db, $sql))
+              while ($row = mysqli_fetch_assoc($result)) :
+                extract($row); ?>
             <li class="grid_4 item">
-                <a href="#" class="btn-remove">
+                <a href="./?page=cart&id=<?= $product_id ?>&action=remove" class="btn-remove">
                     <i class="far fa-trash-alt"></i>
                 </a>
                 <div class="preview">
-                    <img src="./assets/img/slider-7.webp" />
+                    <img src="./photo/<?= $product_image ?>" style="height: 100px !important; object-fit: contain; object-position: left; margin: 10px" />
                 </div>
                 <div class="details" data-price="15.50">
                     <h3>
-                        Samsung
+                    <?= $product_name ?>
                     </h3>
-                    <p>Galaxy Prime</p>
+                    <p><?= $brand ?></p>
 
                 </div>
                 <div class="inner_container">
@@ -66,83 +81,18 @@
                                 <i class="fas fa-plus"></i>
                             </a>
                         <div class="col_1of2 quantity-text">
-                            <p><span class="current_quantity">1</span> @ £50.50</p>
+                            <p><span class="current_quantity">1</span> @ RS <?=$product_price?></p>
                         </div>
                         <a href="#" class="btn-quantity minus">
                             <i class="fas fa-minus"></i>
                         </a>
                         </p>
-                        <input type="hidden" class="quantity_field" name="quantity" data-price="15.50" value="1" />
+                        <input type="hidden" class="quantity_field" name="quantity" data-price="<?=$product_price?>" value="1" />
                     </div>
                 </div>
 
             </li>
-            <li class="grid_4 item">
-                <a href="#" class="btn-remove">
-                    <i class="far fa-trash-alt"></i>
-                </a>
-                <div class="preview">
-                    <img src="./assets/img/slider-8.webp" />
-                </div>
-                <div class="details" data-price="2.49">
-                    <h3>
-                        OPPO
-                    </h3>
-                    <p>A31 Pro </p>
-
-                </div>
-                <div class="inner_container">
-
-                    <div class="col_1of2 align-center picker">
-                        <p>
-                            <a href="#" class="btn-quantity plus">
-                                <i class="fas fa-plus"></i>
-                            </a>
-                        <div class="col_1of2 quantity-text">
-                            <p><span class="current_quantity">1</span> @ £22.49</p>
-                        </div>
-                        <a href="#" class="btn-quantity minus">
-                            <i class="fas fa-minus"></i>
-                        </a>
-                        </p>
-                        <input type="hidden" class="quantity_field" name="quantity" data-price="2.49" value="1" />
-                    </div>
-                </div>
-
-            </li>
-            <li class="grid_4 item">
-                <a href="#" class="btn-remove">
-                    <i class="far fa-trash-alt"></i>
-                </a>
-                <div class="preview">
-                    <img src="./assets/img/slider-9.webp" />
-                </div>
-                <div class="details" data-price="8.50">
-                    <h3>
-                        Vivo
-                    </h3>
-                    <p>Y 17 Golden</p>
-
-                </div>
-                <div class="inner_container">
-
-                    <div class="col_1of2 align-center picker">
-                        <p>
-                            <a href="#" class="btn-quantity plus">
-                                <i class="fas fa-plus"></i>
-                            </a>
-                        <div class="col_1of2 quantity-text">
-                            <p><span class="current_quantity">1</span> @ £8.50</p>
-                        </div>
-                        <a href="#" class="btn-quantity minus">
-                            <i class="fas fa-minus"></i>
-                        </a>
-                        </p>
-                        <input type="hidden" class="quantity_field" name="quantity" data-price="8.50" value="1" />
-                    </div>
-                </div>
-
-            </li>
+            <?php endwhile ?>
         </ul>
         <div class="grid_12 delivery-payment">
             <div class="grid_6 delivery-address">
@@ -175,9 +125,9 @@
                 </div>
                 <div class="btn-summary">
 
-                    <a href="#" class="btn-checkout btn-reverse">Continue Shopping</a>
+                    <a href="./?page=products" class="btn-checkout btn-reverse">Continue Shopping</a>
 
-                    <a href="#" class="btn-checkout">Checkout</a>
+                    <a href="https://www.sandbox.paypal.com/us/signin" class="btn-checkout">Checkout</a>
 
                 </div>
             </div>

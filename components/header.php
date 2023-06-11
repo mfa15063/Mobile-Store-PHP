@@ -21,14 +21,8 @@
 
             </ul>
             
-                <a type="button" href="./?page=cart" class="btn my-sm-0 pr-3 cart-btn">RS 550 <i class="fal fa-shopping-cart"></i></a>
+                <a type="button" href="./?page=cart" class="btn my-sm-0 pr-3 cart-btn">Cart <i class="fal fa-shopping-cart"></i></a>
         </div>
-        <div class="search-box">
-                <input type="text" class="search-txt" name="" placeholder="Searh Here...">
-                <a href="#" class="search-btn">
-                <ion-icon name="search-outline"></ion-icon>
-                </a>
-            </div>
 
             <!-- Ionic Icons -->
             <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>

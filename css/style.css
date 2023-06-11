@@ -3,14 +3,11 @@ body{
 	}
 #header
 	{
-		height:50px;
+		height:70px;
 		width:100%;
-		background-color:#111;
+		background-color:#ff6f00;
 		color:#fff;
 		text-indent:10px;
-		-webkit-box-shadow:0px 0px 20px 0px black;
-		-moz-box-shadow:0px 0px 20px 0px black;
-		box-shadow:0px 0px 20px 0px black;
 	}
 	
 #header img
@@ -55,7 +52,7 @@ body{
 
 #header ul li a:hover
 	{
-		color:#25e;
+		color:#ffad01;
 	}
 
 #container
@@ -302,23 +299,25 @@ body{
 #leftnav
 	{
 		position:fixed;
-		background-color:#111;
-		width:200px;
-		top:7%;
+		background-color:#ff6f00;
+		width:216px;
+		top:9%;
 		height:650px;
 	}
 	
 #leftnav ul
 	{
 		list-style-type:none;
-		text-indent:35px;
 		right:25px;
 		position:relative;
+		text-align: center;
+    	font-size: 26px;
+    	font-weight: 500;
 	}
 
 #leftnav ul li
 	{
-		border-bottom:1px solid #333;
+		border-bottom:1px solid #ffad01;
 		padding-top:10px;
 		padding-bottom:10px;
 		width:200px;
@@ -327,7 +326,7 @@ body{
 #leftnav ul li a
 	{
 		text-decoration:none;
-		color:#333;
+		color:white;
 		font-size:20px;
 	}
 	

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
+	<title>Hamza Mobiles</title>
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<script src="../js/bootstrap.js"></script>
@@ -55,7 +55,7 @@ $(function () {
             plotShadow: false
         },
         title: {
-            text: 'Products share of Shoe Brands as of year <?php echo $date = date("Y"); ?>'
+            text: 'Products share of Mobile Brands as of year <?php echo $date = date("Y"); ?>'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -101,13 +101,12 @@ $(function () {
 <body>
 
 	<div id="header" style="position:fixed;">
-		<img src="../img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>Hamza Mobiles</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];
 
-					$query = $conn->query ("SELECT * FROM admin WHERE adminid = '$id' ") or die (mysqli_error());
+					$query = $conn->query ("SELECT * FROM admin WHERE adminid = '$id' ") or die (mysqli_error($db));
 					$fetch = $query->fetch_array ();
 
 			?>
@@ -123,18 +122,10 @@ $(function () {
 	<div id="leftnav">
 		<ul>
 			<li><a href="admin_home.php" style="color:#333;">Dashboard</a></li>
-			<li><a href="admin_home.php">Products</a>
-				<ul>
-					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Features</a></li>
-					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Basketball</a></li>
-					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Football</a></li>
-					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Running</a></li>
-				</ul>
-			</li>
-			<li><a href="transaction.php">Transactions</a></li>
-			<li><a href="customer.php">Customers</a></li>
-			<li><a href="message.php">Messages</a></li>
-			<li><a href="order.php">Orders</a></li>
+			<li><a href="admin_iphone.php">Iphone</a></li>
+			<li><a href="admin_samsung.php">Samsung</a></li>
+			<li><a href="admin_vivo.php">Vivo</a></li>
+			<li><a href="admin_oppo.php">Oppo</a></li>
 		</ul>
 	</div>
 	<div id="rightcontent" style="position:absolute; top:10%;">

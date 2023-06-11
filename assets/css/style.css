@@ -74,9 +74,13 @@ body{
 }
 
 .navbar-brand{
-	color: #ffad01;
+  color: #ff6b00;
 	font-size: 30px;
 	font-weight: 600;
+}
+
+.navbar-brand:hover, .navbar-brand.scroll{
+	color: #ffad01;
 }
 
 .cart-btn{

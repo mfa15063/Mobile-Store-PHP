@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Online Shoe Store</title>
-	<link rel="icon" href="img/logo.jpg" />
+	<title>Hamza Mobiles</title>
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<script src="js/bootstrap.js"></script>
@@ -22,8 +21,7 @@
 </head>
 <body>
 	<div id="header">
-		<img src="../img/logo.jpg">
-		<label>Online Shoe Store</label>
+		<label>Hamza Mobiles</label>
 	</div>
 
 		<?php include('../function/admin_login.php');?>

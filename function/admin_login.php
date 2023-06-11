@@ -10,7 +10,7 @@ if (isset($_POST['enter']))
 
 		
 			$result=$conn->query("SELECT * FROM admin WHERE username='$username' AND password='$password' ")
-				or die ('cannot login' . mysqli_error());
+				or die ('cannot login' . mysqli_error($db));
 			$row=$result->fetch_array  ();
 			$run_num_rows = $result->num_rows;
 							

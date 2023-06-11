@@ -89,13 +89,13 @@
                     </button>
                         </form>
                         <p class="mt-4 text-sm text-gray-500">
-                            Bacon ipsum dolor amet short ribs pig sausage prosciuto chicken spare ribs salami.
+                            This is Hamza Mobiles. Here you find your desired mobile phone at low price.
                         </p>
                     </div>
                 </div>
                 <div class="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
                     <p class="text-sm text-gray-500">
-                        © Copyright 2020 Hamza Mob. All rights reserved.
+                        © Copyright 2023 Hamza Mob. All rights reserved.
                     </p>
                     <div class="flex items-center mt-4 space-x-4 sm:mt-0">
                     <?php 
